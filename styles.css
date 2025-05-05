@@ -17,6 +17,56 @@ body {
   text-align: center;
 }
 
+/* DIVIDER */
+.image-divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 40px 0;
+  position: relative;
+  text-align: center;
+}
+
+.divider-line {
+  height: 1px;
+  background-color: #ddd;
+  flex-grow: 1;
+}
+
+.divider-image {
+  width: 60px; 
+  height: 40px; 
+  margin: 0 20px;
+  object-fit: contain;
+}
+
+/* decorative elements */
+.fancy-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.fancy-divider::before,
+.fancy-divider::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ddd;
+  margin: 0 15px;
+}
+
+.fancy-divider img {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  background-color: white; 
+  border-radius: 50%; 
+}
+
 /* HEADER AND NAVIGATION */
 .header {
   padding: 0 15px; 
