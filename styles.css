@@ -201,7 +201,7 @@ body {
 
 /* FIRST IMPRESSION */
 
-#first-img {
+.first-img {
   margin-top: 20px;
   max-width: 80%;
   }
