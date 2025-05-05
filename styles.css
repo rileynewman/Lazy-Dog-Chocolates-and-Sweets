@@ -1,5 +1,13 @@
 :root {
---primary-color: #E58EAF
+  --primary-color: #E58EAF;
+}
+
+/* Basic Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 80px; /* Add padding equal to header height */
+  font-family: sans-serif;
 }
 
 /* HEADER AND NAVIGATION */
@@ -9,7 +17,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #E58EAF;
+  background-color: var(--primary-color);
   font-family: sans-serif;
   position: fixed; 
   top: 0;
@@ -20,7 +28,7 @@
 }
 
 .header .logo-image {
-  height: 100px;
+  height: 60px; /* Reduced to fit better in the header */
   width: auto; 
   margin-left: auto;
   margin-right: auto;
@@ -30,9 +38,8 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  position: absolute;
-  left: 0;
-  right: 0;
+  align-items: center;
+  height: 100%;
 }
 
 .nav {
@@ -50,7 +57,7 @@
   position: absolute;
   top: 80px; 
   right: 0;
-  background-color: #E58EAF;
+  background-color: var(--primary-color);
   flex-direction: column;
   align-items: center;
   gap: 20px;
@@ -84,9 +91,26 @@
 .hamburger span {
   width: 20px;
   height: 2px; 
-  background-color: ##E58EAF;
+  background-color: #FFFFFF; /* Fixed incorrect value with double # */
   border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  
+  .nav-links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+  }
 }
 
 /* END HEADER */
