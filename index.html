@@ -36,6 +36,24 @@
       </div>
     </nav>
   </header>
+  
+<!-- BANNER -->
+<div class="scrolling-banner">
+  <div class="banner-container">
+    <div class="banner-item">
+      <img src="ld-trans.svg" alt="Lazy Dog Icon"> May Special: Buy One Get One 50% Off All Chocolate Truffles!
+    </div>
+    <div class="banner-item">
+      <img src="ld-trans.svg" alt="Lazy Dog Icon"> New Flavor Alert: Lavender Honey Ice Cream Now Available!
+    </div>
+    <div class="banner-item">
+      <img src="ld-trans.svg" alt="Lazy Dog Icon"> Weekend Special: Free Coffee with Any Pastry Purchase!
+    </div>
+    <div class="banner-item">
+      <img src="ld-trans.svg" alt="Lazy Dog Icon"> Join Our Chocolate Club: 15% Off Monthly Subscriptions!
+    </div>
+  </div>
+</div>
 
   <main>
     
@@ -107,6 +125,18 @@
         });
       });
     });
+
+    // BANNER
+  document.addEventListener('DOMContentLoaded', function() {
+    // You can control banner speed here if needed
+    const bannerContainer = document.querySelector('.banner-container');
+    // Duplicate the items to ensure continuous scrolling
+    const items = document.querySelectorAll('.banner-item');
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      bannerContainer.appendChild(clone);
+    });
+  });
   </script>
 </body>
 </html>
