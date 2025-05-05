@@ -218,8 +218,7 @@ body {
 }
 
 #first-imp #store-img {
-  max-width: 60%;
-  border-radius: 10px;
+  max-width: 75%;
   margin-bottom: 15px;
 }
 
@@ -227,12 +226,11 @@ body {
   background-color: #ffcfe1;
   padding: 30px;
   margin: 20px auto;
-  border-radius: 15px;
-  max-width: 50%;
+  max-width: 75%;
 }
 
 #about img {
-  max-width: 60%;
+  max-width: 75%;
   border-radius: 10px;
   margin-bottom: 15px;
 }
