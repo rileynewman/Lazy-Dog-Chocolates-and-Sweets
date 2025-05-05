@@ -199,3 +199,11 @@ body {
   animation-play-state: paused;
 }
 
+/* FIRST IMPRESSION */
+
+#first-imp {
+  margin: 10% 10% 40% 40%;
+  box-shadow: #E58EAF;
+  padding: 1rem 1rem 1.5rem 1.5rem;
+}
+
