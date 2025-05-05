@@ -2,18 +2,25 @@
   --primary-color: #E58EAF;
 }
 
+/* Global Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Basic Body Styling */
 body {
   margin: 0;
   padding: 0;
   padding-top: 80px; /* Add padding equal to header height */
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 /* HEADER AND NAVIGATION */
 .header {
   padding: 0 15px; 
   width: 100%;
+  max-width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,6 +33,7 @@ body {
   right: 0; 
   height: 80px;
   z-index: 100;
+  box-sizing: border-box;
 }
 
 .header .logo-image {
