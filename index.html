@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lazy Dog Chocolate and Sweets</title>
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -13,20 +13,21 @@
   <meta name="description" content="Lazy Dog Chocolate and Sweets - make life sweeter" />
   <link rel="apple-touch-icon" href="ld-trans.svg" />
   <link rel="icon" href="ld-trans.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="header">
     <div class="logo">
-  <a href="index.html">
-    <img src="ld-trans.svg" alt="Lazy Dog Logo" class="logo-image">
-  </a>
-</div>
+      <a href="index.html">
+        <img src="ld-trans.svg" alt="Lazy Dog Logo" class="logo-image">
+      </a>
+    </div>
     <nav class="nav">
       <ul class="nav-links" id="nav-links">
         <li><a href="#">Our Story</a></li>
         <li><a href="#">Shop</a></li>
-        <li><a href="#">Catering</a></li>
-        <li><a href="#">Venue Rental</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Community</a></li>
       </ul>
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -35,13 +36,26 @@
       </div>
     </nav>
   </header>
-<footer></footer>
+
+  <main>
+    <!-- FIRST IMPRESSION -->
+    <section class="homepage" id="first-imp">
+      <img src="#" id="store-img" alt="Lazy Dog storefront - a pink 1800s style store">
+      <h1>Lazy Dog Chocolate and Sweets</h1>
+      <p id="img-sub">Making every day a little sweeter</p>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Footer content goes here -->
+  </footer>
   
-<script>
+  <script>
     // Hamburger menu
     document.addEventListener('DOMContentLoaded', function() {
       const hamburger = document.getElementById("hamburger");
       const navLinks = document.getElementById("nav-links");
+      
       // Toggle menu on hamburger click
       hamburger.addEventListener("click", function() {
         navLinks.classList.toggle("active");
@@ -63,6 +77,6 @@
         });
       });
     });
-</script>
+  </script>
 </body>
 </html>
