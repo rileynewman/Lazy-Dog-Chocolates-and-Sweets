@@ -200,10 +200,50 @@ body {
 }
 
 /* FIRST IMPRESSION */
-
 #first-imp {
-  margin: 10% 10% 40% 40%;
-  box-shadow: #E58EAF;
-  padding: 1rem 1rem 1.5rem 1.5rem;
+  background-color: #ffcfe1; 
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 15px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#first-imp h1 {
+  margin-top: 20px;
+  color: #333;
+}
+
+#first-imp #img-sub {
+  color: #555;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+#first-imp #store-img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#about {
+  background-color: #ffcfe1;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 15px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+#about p {
+  color: #333;
+  line-height: 1.6;
 }
 
