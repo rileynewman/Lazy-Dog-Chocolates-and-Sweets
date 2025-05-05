@@ -200,6 +200,10 @@ body {
 }
 
 /* FIRST IMPRESSION */
+.img-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
 .first-img {
   margin: 20px auto;
