@@ -202,7 +202,7 @@ body {
 /* FIRST IMPRESSION */
 
 .first-img {
-  margin-top: 20px;
+  margin: 20px auto;
   max-width: 80%;
   }
 
