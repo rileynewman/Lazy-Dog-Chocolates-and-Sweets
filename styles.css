@@ -203,8 +203,11 @@ body {
 
 .first-img {
   margin: 20px auto;
-  max-width: 80%;
-  }
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 #first-imp {
   background-color: #ffcfe1; 
