@@ -4,12 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lazy Dog Chocolate and Sweets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="Lazy Dog" />
   <meta name="application-name" content="Lazy Dog" />
-  <meta name="theme-color" content="#E58EAF" />
+  <meta name="theme-color" content="#ffcfe1" />
   <meta name="description" content="Lazy Dog Chocolate and Sweets - make life sweeter" />
   <link rel="apple-touch-icon" href="ld-trans.svg" />
   <link rel="icon" href="ld-trans.svg" type="image/x-icon" />
@@ -24,10 +27,10 @@
     </div>
     <nav class="nav">
       <ul class="nav-links" id="nav-links">
-        <li><a href="#">Our Story</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Community</a></li>
+        <li><a href="our-story.html">Our Story</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="community.html">Community</a></li>
       </ul>
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -36,19 +39,93 @@
       </div>
     </nav>
   </header>
+  
+<!-- BANNER -->
+<div class="scrolling-banner">
+  <div class="banner-container">
+    <div class="banner-item">
+      <img src="ld-trans.svg" alt="Lazy Dog Icon"> May Drumstick of the Month: Taro Brownie Blast Drumstick!
+    </div>
+    <div class="banner-item">
+      <img src="ld-trans.svg" alt="Lazy Dog Icon"> May Ice Cream Sandwich: Purple Elephant
+    </div>
+    <div class="banner-item">
+      <img src="ld-trans.svg" alt="Lazy Dog Icon"> New Flavor Alert: Electric Watermelon Sherbet
+    </div>
+    <div class="banner-item">
+      <img src="ld-trans.svg" alt="Lazy Dog Icon"> Join Our Chocolate Club: 15% Off Monthly Subscriptions!
+    </div>
+  </div>
+</div>
 
   <main>
-    <!-- FIRST IMPRESSION -->
-    <section class="homepage" id="first-imp">
-      <img src="#" id="store-img" alt="Lazy Dog storefront - a pink 1800s style store">
-      <h1>Lazy Dog Chocolate and Sweets</h1>
-      <p id="img-sub">Making every day a little sweeter</p>
-    </section>
+    
+  <!-- FIRST IMPRESSION -->
+  <div class="img-wrapper">
+      <img src="IMG_0021.png" class="first-img" alt="Lazy Dog storefront - a pink 1800s style store">
+  </div>
+      
+  <section class="homepage" id="first-imp"> 
+    <h1>Lazy Dog Chocolate and Sweets</h1>
+    <p id="img-sub">Making every day a little sweeter</p>
+  </section>
   </main>
+  
+<!-- DIVIDER -->
+<div class="fancy-divider">
+      <img src="ld-trans.svg" alt="Divider">
+</div>
+  
+<!-- ABOUT -->
+  <section class="homepage" id="about">
+    <img src="ld-trans.svg" alt="Lazy Dog Logo" id="about-img">
+    <p>Offering handcrafted chocolates, a variety of housemade frozen confections, signature coffee drinks, and novelty candy galore. <br> If you dream it - we have it. </p>
+  </section>
+  
+<!-- DIVIDER -->
+<div class="fancy-divider">
+      <img src="ld-trans.svg" alt="Divider">
+</div>
 
-  <footer>
-    <!-- Footer content goes here -->
-  </footer>
+<section class="store-info">
+  <!-- HOURS -->
+  <div class="hours-container">
+    <h2 class="hours-title">Hours</h2>
+    <p class="hours">Sunday-Thursday: <br>
+      10:00am to 9:00pm</p> 
+    <p class="hours">Friday-Saturday: <br>
+      10:00am to 10:30pm</p>
+  </div>
+
+  <!-- EMAIL SIGN UP -->
+  <div class="email-container">
+    <h2 class="email-title">Email Sign Up</h2>
+    <p class="email-desc">Sign up to receive our monthly newsletter and exclusive offers</p>
+    <form class="email-form">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+  <!-- ADDRESS -->
+  <div class="address-container">
+    <h2>Find Us</h2>
+    <p class="address">111 Mill St <br> 
+      Grass Valley, CA 95946</p>
+  </div>
+</section>
+  
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Lazy Dog Chocolate and Sweets</p>
+    <div class="social-links">
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="Twitter">Twitter</a>
+    </div>
+  </div>
+</footer>
   
   <script>
     // Hamburger menu
@@ -75,6 +152,18 @@
         link.addEventListener('click', function() {
           navLinks.classList.remove('active');
         });
+      });
+    });
+
+    // BANNER - Fixed to start immediately
+    document.addEventListener('DOMContentLoaded', function() {
+      const bannerContainer = document.querySelector('.banner-container');
+      const items = document.querySelectorAll('.banner-item');
+
+      // Duplicate banner items for seamless loop
+      items.forEach(item => {
+        const clone = item.cloneNode(true);
+        bannerContainer.appendChild(clone);
       });
     });
   </script>
