@@ -1,5 +1,9 @@
 :root {
   --primary-color: #ffcfe1;
+  --accent-color: #E58EAF;
+  --text-light: #FFFFFF;
+  --text-dark: #333333;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Global Box Sizing */
@@ -15,6 +19,9 @@ body {
   font-family: "Cascadia Code", sans-serif;
   overflow-x: hidden;
   text-align: center;
+  color: var(--text-dark);
+  line-height: 1.6;
+  max-width: 1200px;
 }
 
 /* DIVIDER */
@@ -63,28 +70,34 @@ body {
   height: 80px;
   z-index: 100;
   box-sizing: border-box;
+  box-shadow: var(--shadow);
 }
 
 .header .logo-image {
-  height: 85px; 
+  height: 70px; 
   width: auto; 
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.header .logo-image:hover {
+  transform: scale(1.05);
 }
 
 .logo {
-  flex: 1;
+  flex: 0 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-
+  margin-right: 20px;
 }
 
 .nav {
   position: relative;
-  margin-left: auto; 
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   z-index: 101; 
 }
 
@@ -94,34 +107,61 @@ body {
   gap: 30px;
   margin: 0;
   padding: 0;
-  position: absolute;
-  top: 80px; 
-  right: 0;
-  background-color: #FFFFFF;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-  border-radius: 0 0 0 10px;
-  width: 200px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  display: none;
-  z-index: 100;
 }
 
-.nav-links.active {
-  display: flex;
+/* Mobile menu styles */
+@media (max-width: 767px) {
+  .nav-links {
+    position: absolute;
+    top: 80px; 
+    right: 0;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 0 0 0 10px;
+    width: 200px;
+    box-shadow: var(--shadow);
+    display: none;
+    z-index: 100;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: #000000;
+  color: var(--text-dark);
   font-size: 1.2rem;
   font-weight: 600;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links li a:hover {
+  color: var(--accent-color);
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
 }
 
 .hamburger {
-  display: flex;
+  display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 4px;
@@ -129,27 +169,17 @@ body {
 }
 
 .hamburger span {
-  width: 20px;
-  height: 2px; 
-  background-color: #FFFFFF; 
+  width: 25px;
+  height: 3px; 
+  background-color: var(--text-light); 
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
-/* Media query for larger screens */
-@media (min-width: 768px) {
+/* Media query for mobile screens */
+@media (max-width: 767px) {
   .hamburger {
-    display: none;
-  }
-  
-  .nav-links {
-    position: static;
     display: flex;
-    flex-direction: row;
-    width: auto;
-    box-shadow: none;
-    background-color: transparent;
-    padding: 0;
   }
 }
 
@@ -159,9 +189,9 @@ body {
 .scrolling-banner {
   position: relative;
   width: 100%;
-  height: 30px;
-  background-color: #E58EAF;
-  opacity: 70%;
+  height: 40px;
+  background-color: var(--accent-color);
+  opacity: 0.9;
   overflow: hidden;
   margin-top: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -172,8 +202,7 @@ body {
   position: absolute;
   white-space: nowrap;
   will-change: transform;
-  animation: scroll-left 90s linear infinite;
-  animation-play-state: paused;
+  animation: scroll-left 40s linear infinite;
 }
 
 .banner-item {
@@ -183,10 +212,11 @@ body {
   color: white;
   font-weight: bold;
   font-size: 18px;
+  height: 40px;
 }
 
 .banner-item img {
-  height: 30px;
+  height: 25px;
   margin-right: 10px;
 }
 
@@ -200,10 +230,9 @@ body {
   animation-play-state: paused;
 }
 
-
 /* FIRST IMPRESSION */
 .img-wrapper {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -213,47 +242,100 @@ body {
   height: 400px;
   object-fit: cover;
   display: block;
-  margin: 20px auto 20px auto;
+  margin: 30px auto;
   border-radius: 15px;
+  box-shadow: var(--shadow);
 }
 
 #first-imp {
-  background-color: #ffcfe1; 
-  padding: 30px;
-  margin: 20px auto;
+  background-color: var(--primary-color); 
+  padding: 40px;
+  margin: 30px auto;
   max-width: 75%;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
 } 
 
 #first-imp h1 {
-  margin-top: 20px;
-  color: #FFFFFF;
+  margin-top: 0;
+  color: var(--text-light);
+  font-size: 2.5rem;
 }
 
 #first-imp #img-sub {
-  color: #FFFFFF;
-  margin-bottom: 20px;
-}
-
-#first-imp #store-img {
-  max-width: 100%;
-  margin-bottom: 15px;
+  color: var(--text-light);
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 #about {
-  background-color: #ffcfe1;
-  padding: 30px;
-  margin: 20px auto;
+  background-color: var(--primary-color);
+  padding: 40px;
+  margin: 30px auto;
   max-width: 75%;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
 }
 
 #about img {
-  max-width: 75%;
+  max-width: 80px;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 #about p {
-  color: #FFFFFF;
-  line-height: 1.6;
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: 1.2rem;
 }
 
+/* Store Info Section */
+.store-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin: 40px auto;
+  padding: 0 20px;
+  max-width: 1000px;
+}
+
+.store-info > div {
+  flex: 1 1 300px;
+  padding: 25px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.hours-title, .email-title {
+  color: var(--accent-color);
+  margin-top: 0;
+}
+
+.hours {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.email-desc {
+  margin-bottom: 20px;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.email-form input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.email-form button {
+  padding: 12px;
+  background-color: var
