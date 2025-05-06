@@ -201,7 +201,7 @@ body {
 
 /* FIRST IMPRESSION */
 .img-wrapper {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -211,7 +211,7 @@ body {
   height: 400px;
   object-fit: cover;
   display: block;
-  margin: 0 auto 20px auto;
+  margin: 20px auto 20px auto;
   border-radius: 15px;
 }
 
