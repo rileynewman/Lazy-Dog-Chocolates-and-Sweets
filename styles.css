@@ -173,6 +173,7 @@ body {
   white-space: nowrap;
   will-change: transform;
   animation: scroll-left 90s linear infinite;
+  animation-play-state: paused;
 }
 
 .banner-item {
@@ -198,6 +199,7 @@ body {
 .scrolling-banner:hover .banner-container {
   animation-play-state: paused;
 }
+
 
 /* FIRST IMPRESSION */
 .img-wrapper {
