@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lazy Dog Chocolate and Sweets</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -62,12 +62,12 @@
     
   <!-- FIRST IMPRESSION -->
   <div class="img-wrapper">
-      <img src="IMG_0021.png"  class="first-img" alt="Lazy Dog storefront - a pink 1800s style store">
-      </div>
+      <img src="IMG_0021.png" class="first-img" alt="Lazy Dog storefront - a pink 1800s style store">
+  </div>
       
-      <section class="homepage" id="first-imp"> 
-        <h1>Lazy Dog Chocolate and Sweets</h1>
-      <p id="img-sub">Making every day a little sweeter</p>
+  <section class="homepage" id="first-imp"> 
+    <h1>Lazy Dog Chocolate and Sweets</h1>
+    <p id="img-sub">Making every day a little sweeter</p>
   </section>
   </main>
   
@@ -78,7 +78,7 @@
   
 <!-- ABOUT -->
   <section class="homepage" id="about">
-    <img src="#" id="about-img">
+    <img src="ld-trans.svg" alt="Lazy Dog Logo" id="about-img">
     <p>Offering handcrafted chocolates, a variety of housemade frozen confections, signature coffee drinks, and novelty candy galore. <br> If you dream it - we have it. </p>
   </section>
   
@@ -87,23 +87,45 @@
       <img src="ld-trans.svg" alt="Divider">
 </div>
 
+<section class="store-info">
   <!-- HOURS -->
-    <h1 class="hours-title">Hours</h1>
-    <p class="hours"> Sunday-Thursday: <br>
+  <div class="hours-container">
+    <h2 class="hours-title">Hours</h2>
+    <p class="hours">Sunday-Thursday: <br>
       10:00am to 9:00pm</p> 
-    <p class="hours"> Friday-Saturday: <br>
+    <p class="hours">Friday-Saturday: <br>
       10:00am to 10:30pm</p>
+  </div>
 
-    <!-- EMAIL SIGN UP -->
-    <h1 class="email-title">Email Sign Up</h1>
-    <p class="email-desc">Sign up to recieve our monthly newsletter and exclusive offers</p>
+  <!-- EMAIL SIGN UP -->
+  <div class="email-container">
+    <h2 class="email-title">Email Sign Up</h2>
+    <p class="email-desc">Sign up to receive our monthly newsletter and exclusive offers</p>
+    <form class="email-form">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
 
-    <!-- ADDRESS -->
-    <p class="address"> 111 Mill St <br> 
-      Grass Valley, CA 95946 </p>
+  <!-- ADDRESS -->
+  <div class="address-container">
+    <h2>Find Us</h2>
+    <p class="address">111 Mill St <br> 
+      Grass Valley, CA 95946</p>
+  </div>
+</section>
   
-   <!-- FOOTER -->
-  <footer></footer>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Lazy Dog Chocolate and Sweets</p>
+    <div class="social-links">
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="Twitter">Twitter</a>
+    </div>
+  </div>
+</footer>
   
   <script>
     // Hamburger menu
@@ -133,20 +155,17 @@
       });
     });
 
-    // BANNER
-window.addEventListener('load', function () {
-  const bannerContainer = document.querySelector('.banner-container');
-  const items = document.querySelectorAll('.banner-item');
+    // BANNER - Fixed to start immediately
+    document.addEventListener('DOMContentLoaded', function() {
+      const bannerContainer = document.querySelector('.banner-container');
+      const items = document.querySelectorAll('.banner-item');
 
-  // Duplicate banner items for seamless loop
-  items.forEach(item => {
-    const clone = item.cloneNode(true);
-    bannerContainer.appendChild(clone);
-  });
-
-  // Start the animation after content is ready
-  bannerContainer.style.animationPlayState = 'running';
-});
+      // Duplicate banner items for seamless loop
+      items.forEach(item => {
+        const clone = item.cloneNode(true);
+        bannerContainer.appendChild(clone);
+      });
+    });
   </script>
 </body>
 </html>
