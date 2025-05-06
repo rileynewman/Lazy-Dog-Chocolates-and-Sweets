@@ -194,7 +194,6 @@ body {
   opacity: 0.9;
   overflow: hidden;
   margin-top: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .banner-container {
@@ -243,8 +242,6 @@ body {
   object-fit: cover;
   display: block;
   margin: 30px auto;
-  border-radius: 15px;
-  box-shadow: var(--shadow);
 }
 
 #first-imp {
@@ -252,8 +249,6 @@ body {
   padding: 40px;
   margin: 30px auto;
   max-width: 75%;
-  border-radius: 15px;
-  box-shadow: var(--shadow);
 } 
 
 #first-imp h1 {
@@ -274,8 +269,6 @@ body {
   padding: 40px;
   margin: 30px auto;
   max-width: 75%;
-  border-radius: 15px;
-  box-shadow: var(--shadow);
 }
 
 #about img {
@@ -305,8 +298,6 @@ body {
   flex: 1 1 300px;
   padding: 25px;
   background-color: #f9f9f9;
-  border-radius: 15px;
-  box-shadow: var(--shadow);
 }
 
 .hours-title, .email-title {
