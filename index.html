@@ -134,16 +134,19 @@
     });
 
     // BANNER
-  document.addEventListener('DOMContentLoaded', function() {
-    // You can control banner speed here if needed
-    const bannerContainer = document.querySelector('.banner-container');
-    // Duplicate the items to ensure continuous scrolling
-    const items = document.querySelectorAll('.banner-item');
-    items.forEach(item => {
-      const clone = item.cloneNode(true);
-      bannerContainer.appendChild(clone);
-    });
+window.addEventListener('load', function () {
+  const bannerContainer = document.querySelector('.banner-container');
+  const items = document.querySelectorAll('.banner-item');
+
+  // Duplicate banner items for seamless loop
+  items.forEach(item => {
+    const clone = item.cloneNode(true);
+    bannerContainer.appendChild(clone);
   });
+
+  // Start the animation after content is ready
+  bannerContainer.style.animationPlayState = 'running';
+});
   </script>
 </body>
 </html>
