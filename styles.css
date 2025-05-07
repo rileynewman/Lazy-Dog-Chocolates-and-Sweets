@@ -232,7 +232,7 @@ body {
 /* FIRST IMPRESSION */
 .images {
   text-align: center;
-  width: 600px;
+  width: 300px;
   max-with: 100%;
   margin: 30px auto;
   object-fit: cover;
