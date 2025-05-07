@@ -230,15 +230,10 @@ body {
 }
 
 /* FIRST IMPRESSION */
-.img-wrapper {
-  max-width: 600px;
+.images {
+  text-align: center;
+  width: 600px;
   margin: 0 auto;
-}
-
-.first-img {
-  max-width: 100%;
-  width: 80px;
-  height: 100px;
   object-fit: cover;
   display: block;
   margin: 30px auto;
