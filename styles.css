@@ -261,7 +261,7 @@ body {
 }
 
 #about {
-  background-color: var(--text-light);
+  background-color: var(--text-dark);
   padding: 30px;
   margin: 30px auto;
   max-width: 75%;
@@ -274,7 +274,7 @@ body {
 }
 
 #about p {
-  color: var(--text-light);
+  color: var(--text-dark);
   line-height: 1.8;
   font-size: 1.2rem;
 }
