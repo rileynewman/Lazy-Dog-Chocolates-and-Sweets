@@ -261,7 +261,7 @@ body {
 }
 
 #about {
-  background-color: var(--text-dark);
+  background-color: white;
   padding: 30px;
   margin: 30px auto;
   max-width: 75%;
