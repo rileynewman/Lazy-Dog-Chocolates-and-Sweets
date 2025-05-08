@@ -243,37 +243,11 @@ body {
   margin: 30px auto;
 }
 
-#first-imp {
-  background-color: var(--primary-color); 
-  padding: 40px;
-  margin: 30px auto;
-  max-width: 75%;
-} 
-
-#first-imp h1 {
-  margin-top: 0;
-  color: var(--text-dark);
-  font-size: 1.5rem;
-}
-
-#first-imp #img-sub {
-  color: var(--text-dark);
-  margin-bottom: 0;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
 #about {
   background-color: white;
   padding: 30px;
   margin: 5px auto;
   max-width: 75%;
-}
-
-#about img {
-  max-width: 80px;
-  border-radius: 10px;
-  margin-bottom: 20px;
 }
 
 #about p {
